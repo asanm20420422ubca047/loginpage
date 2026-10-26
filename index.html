@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating 3D cubes in the background -->
+  <div class="scene" aria-hidden="true">
+    <div class="cube c1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cube c2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cube c3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cube c4"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <main class="stage">
+    <div class="card" id="card">
+      <h1>Welcome Back</h1>
+      <p class="sub">Sign in to continue</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <input type="text" id="username" placeholder=" " autocomplete="username" required />
+          <label for="username">Username</label>
+        </div>
+
+        <div class="field">
+          <input type="password" id="password" placeholder=" " autocomplete="current-password" required />
+          <label for="password">Password</label>
+          <button type="button" id="toggle" class="toggle" aria-label="Show password">Show</button>
+        </div>
+
+        <p id="message" class="message" role="alert"></p>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <p class="hint">Demo login: <b>admin</b> / <b>admin123</b></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
